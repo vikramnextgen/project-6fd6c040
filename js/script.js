@@ -4,7 +4,7 @@ let isKorean = true;
 const greetings = {
     korean: {
         text: '안녕하세요!',
-        translation: 'Hello World!'
+        translation: 'Hello World! Norae in India'
     },
     english: {
         text: 'Hello World!',
