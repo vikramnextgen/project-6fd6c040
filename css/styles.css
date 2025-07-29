@@ -1,0 +1,134 @@
+/* Modern CSS with animations and responsive design */
+:root {
+    --primary-color: #6366f1;
+    --background-color: #f8fafc;
+    --text-color: #1e293b;
+    --card-background: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.norae-app {
+    background: var(--card-background);
+    border-radius: 16px;
+    box-shadow: 0 4px 6px var(--shadow-color);
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.norae-app:hover {
+    transform: translateY(-5px);
+}
+
+.title {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.greeting-card {
+    margin: 2rem 0;
+    padding: 2rem;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #6366f1 0%, #818cf8 100%);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.greeting-text {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+.translation {
+    font-size: 1.5rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease forwards 0.2s;
+}
+
+.toggle-btn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background: #4f46e5;
+    transform: scale(1.05);
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .title {
+        font-size: 2rem;
+    }
+    
+    .greeting-text {
+        font-size: 1.75rem;
+    }
+    
+    .translation {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .norae-app {
+        padding: 1.5rem;
+    }
+    
+    .title {
+        font-size: 1.75rem;
+    }
+    
+    .greeting-text {
+        font-size: 1.5rem;
+    }
+    
+    .translation {
+        font-size: 1rem;
+    }
+}
